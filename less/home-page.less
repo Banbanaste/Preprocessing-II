@@ -89,6 +89,15 @@
       margin-bottom: 30px;
       .btn {
         .greenBtn();
+        .transition(0.5s, ease);
+        &:hover {
+          cursor: pointer;
+          .translate(0px, -5px);
+          .box-shadow(
+            0 19px 38px rgba(0, 0, 0, 0.3),
+            0 15px 12px rgba(0, 0, 0, 0.22) ;
+          );
+        }
       }
     }
 
@@ -112,4 +121,37 @@
   p {
     padding-bottom: 20px;
   }
+}
+
+// form
+form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .rounded(5px);
+  background-color: @silver;
+  select {
+    height: 44px;
+    width: 400px;
+    font-size: 20px;
+  }
+  button {
+    margin-left: 20px;
+    border-radius: 5px;
+    width: 100px;
+    font-size: 20px;
+    .greenBtn();
+    .transition(0.5s, ease);
+
+    &:hover {
+      cursor: pointer;
+      .translate(0px, -5px);
+      .box-shadow(
+        0 19px 38px rgba(0, 0, 0, 0.3),
+        0 15px 12px rgba(0, 0, 0, 0.22) ;
+      );
+    }
+  }
+  padding: 50px;
+  margin-bottom: 30px;
 }
