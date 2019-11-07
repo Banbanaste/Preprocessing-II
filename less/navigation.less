@@ -1,1 +1,39 @@
 // Navigation Styles here
+.header {
+  width: 100%;
+  border-bottom: 2px dashed @navigation-border;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+
+    nav {
+      display: flex;
+      justify-content: space-evenly;
+      width: 350px;
+
+      a {
+        font-size: 1.6rem;
+        .anchorDelete(@font-color);
+        .transition(0.5s, ease);
+        &:hover {
+          .opacity(0.2);
+          .rotation(-5deg);
+        }
+      }
+    }
+
+    @media @mobile {
+      padding: 40px 0 10px;
+      flex-direction: column;
+      h1 {
+        margin-bottom: 20px;
+      }
+      nav {
+        width: 100%;
+      }
+    }
+  }
+}
